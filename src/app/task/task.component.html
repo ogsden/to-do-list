@@ -1,0 +1,15 @@
+<div class="task-container">
+  <form [formGroup]="taskForm">
+    <h3>Task:</h3>
+    <p *ngIf="!isEditing">{{task.title}}</p>
+    <input *ngIf="isEditing" class="input" formControlName="title">
+    <h3>Date:</h3>
+    <p *ngIf="!isEditing">{{task.date}}</p>
+    <input *ngIf="isEditing" class="input" formControlName="date">
+  </form>
+  <div class="control">
+    <button *ngIf="!isEditing" type="submit" class="edit" (click)="taskEdit()">edit</button>
+    <button *ngIf="isEditing" type="submit" class="edit" (click)="taskConfirm()">save</button>
+    <button type="submit" class="delete" (click)="taskDelete(task)">delete</button>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<form [formGroup]="taskForm" class="form">
+  <label for="task">Task: </label>
+  <input class="input" id="task" formControlName="title" required>
+  <label for="date">Date: </label>
+  <input class="input" id="date" formControlName="date" required>
+  <button class="button" type="submit" (click)="addTask()">save</button>
+</form>

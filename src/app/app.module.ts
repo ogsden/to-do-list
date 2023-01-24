@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CreationComponent } from './creation/creation.component';
+import { TaskComponent } from './task/task.component';
+import { ColorDirective } from './color.directive';
+import { DisplayDirective } from './display.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreationComponent,
+    TaskComponent,
+    ColorDirective,
+    DisplayDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
